@@ -15,16 +15,16 @@ function App() {
         <div className="text-center md:text-left space-y-6 max-w-lg">
           <h1 className="text-6xl md:text-6xl font-bold leading-tight">
             Encuentra <span className="text-purple-500">amigos</span> en tu{" "}
-            <span className="text-purple-500">ciudad!</span>
+            ciudad!
           </h1>
           <p className="text-3xl text-gray-300">
             Únete a eventos y disfruta experiencias únicas en grupo.
           </p>
           <div className="flex justify-center md:justify-start space-x-4">
-            <button className="px-12 py-4 bg-gray-600 text-white text-xl rounded-lg shadow-lg transition-transform duration-500 hover:scale-105">
+            <button className="px-12 py-4 bg-gray-600 text-white text-xl rounded-lg shadow-lg transition-all duration-500 transform hover:scale-105 hover:text-xl will-change-transform">
               Saber más
             </button>
-            <button className="px-12 py-4 bg-gradient-to-r from-[#ec008c] to-[#9340ff] text-white text-xl rounded-lg shadow-lg transition-transform duration-500 hover:scale-105">
+            <button className="px-12 py-4 bg-gradient-to-r from-[#ec008c] to-[#9340ff] text-white text-xl rounded-lg shadow-lg transition-all duration-500 transform hover:scale-105 hover:text-xl will-change-transform">
               Prueba Saturn
             </button>
           </div>
