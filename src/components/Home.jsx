@@ -45,6 +45,24 @@ function Home() {
           />
         </div>
       </main>
+
+      {/* New Section */}
+      <section className="mt-52 w-full py-20 bg-gray-900 flex flex-col items-center px-6">
+        <div className="max-w-3xl text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-purple-500">Tango!</span> busca cambiar la
+            forma en la que las personas conectan.
+          </h2>
+          <p className="text-lg text-gray-300">
+            "Nuestra app conecta a personas que buscan nuevas experiencias con
+            locales de su ciudad. Descubre eventos únicos organizados por
+            negocios cerca de ti, diseñados para llenar sus espacios en esos
+            momentos tranquilos, como un martes por la noche. Conecta, disfruta
+            y apoya a los negocios locales mientras haces nuevas amistades y
+            creas recuerdos inolvidables."
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
