@@ -2,11 +2,11 @@ function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-purple-900 text-white flex flex-col items-center">
       {/* Header */}
-      <header className="w-full max-w-7xl flex justify-between items-center p-6">
+      {/* <header className="w-full max-w-5xl flex justify-between items-center p-6">
         <div className="flex items-center space-x-3">
-          <img src="/logo_tango.png" alt="Saturn logo" className="h-24" />
+          <img src="/logo_tango.png" alt="Tango logo" className="h-20" />
         </div>
-      </header>
+      </header> */}
 
       {/* Main Content */}
       <main className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-center mt-10 px-5">

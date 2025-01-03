@@ -4,7 +4,7 @@ function Home() {
       {/* Header */}
       <header className="w-full max-w-7xl flex justify-between items-center p-6">
         <div className="flex items-center space-x-3">
-          <img src="/logo_tango.png" alt="Saturn logo" className="h-24" />
+          <img src="/logo_tango.png" alt="Saturn logo" className="h-20" />
         </div>
       </header>
 
@@ -25,7 +25,7 @@ function Home() {
             </button>
             <button
               className="px-12 py-4 bg-gradient-to-r from-[#ec008c] to-[#882eff] text-white text-xl font-bold rounded-lg shadow-lg transition-all duration-500 transform hover:scale-105 hover:text-xl will-change-transform"
-              onClick={() => (window.location.href = "/login")}
+              onClick={() => (window.location.href = "/userSelection")}
             >
               Prueba Tango!
             </button>
@@ -35,7 +35,7 @@ function Home() {
         {/* Image Section */}
         <div className="ml-20 mt-10 md:mt-0">
           <img
-            src="/friends1.png"
+            src="/friends2.png"
             alt="Friends"
             className="rounded-3xl"
             style={{
@@ -47,19 +47,19 @@ function Home() {
       </main>
 
       {/* New Section */}
-      <section className="mt-52 w-full py-20 bg-gray-900 flex flex-col items-center px-6">
-        <div className="max-w-3xl text-center">
+      <section className="bg-slate-900 mt-60 w-full py-20 bg-gray-90t0 flex flex-col items-center px-6">
+        <div className=" max-w-3xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-purple-500">Tango!</span> busca cambiar la
-            forma en la que las personas conectan.
+            <span className="text-purple-500">Tango!</span> busca revolucionar
+            la forma en la que las personas conectan.
           </h2>
           <p className="text-lg text-gray-300">
-            "Nuestra app conecta a personas que buscan nuevas experiencias con
-            locales de su ciudad. Descubre eventos únicos organizados por
-            negocios cerca de ti, diseñados para llenar sus espacios en esos
-            momentos tranquilos, como un martes por la noche. Conecta, disfruta
-            y apoya a los negocios locales mientras haces nuevas amistades y
-            creas recuerdos inolvidables."
+            Conectamos a personas que buscan nuevas experiencias con locales de
+            su ciudad. ¡Descubre eventos únicos organizados por negocios cerca
+            de ti, diseñados para llenar sus espacios en esos momentos
+            tranquilos, como un martes por la noche. Conecta, disfruta y apoya a
+            los negocios locales mientras haces nuevas amistades y creas
+            recuerdos inolvidables!
           </p>
         </div>
       </section>
