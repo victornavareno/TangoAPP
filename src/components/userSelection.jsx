@@ -4,7 +4,7 @@ function UserSelection() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white relative">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#0a0a1a] via-[#1a1a3a] to-[#2a1a4a] text-white relative">
       {/* Header with Logo */}
       <header className="absolute top-10 left-20">
         <img

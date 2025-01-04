@@ -47,7 +47,7 @@ function ExplorarEventos() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#0a0a1a] via-[#1a1a3a] to-[#2a1a4a] text-white">
       {/* Header */}
       <header className="text-center py-10">
         <img

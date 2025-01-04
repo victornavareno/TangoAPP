@@ -4,27 +4,32 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-800 to-purple-800 text-white flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-b from-[#0a0a1a] via-[#1a1a3a] to-[#2a1a4a] text-white">
       {/* Header */}
-      <header className="w-full max-w-7xl flex justify-between items-center p-6 mt-6">
-        <div className="flex items-center space-x-3">
-          <img src="/logo_tango.png" alt="Tango logo" className="h-16" />
+      <header className="container mx-auto px-6 py-8">
+        <div className="flex items-center">
+          <img src="/logo_tango.png" alt="Tango logo" className="h-16 mt-6" />
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-center mt-10 px-5">
-        {/* Text Section */}
-        <div className="text-center md:text-left space-y-6 max-w-lg">
-          <h1 className="text-6xl md:text-6xl font-extrabold leading-tight">
-            Encuentra{" "}
-            <span className="bg-gradient-to-r from-[#e32eff] to-[#ec008c] bg-clip-text text-transparent">
-              amigos
-            </span>{" "}
-            en tu ciudad!
+      <main className="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between mt-12 gap-8">
+        {/* Left Column */}
+        <div className="max-w-2xl">
+          <h1 className="text-6xl lg:text-7xl font-extrabold tracking-tight leading-none mb-6">
+            <span className="inline-block">
+              Encuentra{" "}
+              <span className="bg-gradient-to-r from-[#e32eff] to-[#ec008c] bg-clip-text text-transparent">
+                amigos
+              </span>
+            </span>
+            <br />
+            <span className="inline-block">en tu ciudad!</span>
           </h1>
-          <p className="text-3xl text-gray-300">
-            Únete a eventos y disfruta experiencias únicas en grupo.
+          <p className="text-2xl text-gray-300 mb-10">
+            <span className="font-normal">Únete a eventos y disfruta</span>
+            <br />
+            <span className="font-bold">experiencias</span> únicas en grupo
           </p>
           <div className="flex justify-center md:justify-start space-x-4">
             <button className="px-12 py-4 bg-gray-600 text-white text-xl rounded-lg shadow-lg transition-all duration-500 transform hover:scale-105 hover:text-xl will-change-transform">
@@ -39,38 +44,16 @@ function Home() {
           </div>
         </div>
 
-        {/* Image Section */}
-        <div className="ml-20 mt-10 md:mt-0">
+        {/* Right Column */}
+        <div className="relative">
+          <div className="absolute -inset-1 bg-gradient-to-r from-[#ec008c] to-[#882eff] opacity-30 blur-2xl rounded-[32px]" />
           <img
             src="/friends2.png"
-            alt="Friends"
-            className="rounded-3xl"
-            style={{
-              boxShadow:
-                "-5px 20px 85px rgba(200, 0, 140, 0.5), -5px 20px 45px rgba(147, 64, 255, 0.5)",
-            }}
+            alt="Friends enjoying time together"
+            className="relative rounded-[32px] max-w-[600px] w-full object-cover"
           />
         </div>
       </main>
-
-      {/* New Section */}
-      <section className="bg-slate-900 mt-60 w-full py-20 bg-gray-90t0 flex flex-col items-center px-6">
-        <div className="max-w-3xl text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-            <span className="text-purple-500">Tango!</span> busca revolucionar
-            la forma en la que las personas conectan.
-          </h2>
-          <p className="text-lg text-gray-300">
-            Conectamos a personas que buscan nuevas experiencias con locales de
-            su ciudad. ¡Descubre eventos únicos organizados por negocios cerca
-            de ti, diseñados para llenar sus espacios en esos momentos
-            tranquilos, como un martes por la noche. Conecta, disfruta y apoya a
-            los negocios locales mientras haces nuevas amistades y creas
-            recuerdos inolvidables!
-          </p>
-        </div>
-      </section>
-      {/* Decorative Footer */}
     </div>
   );
 }
