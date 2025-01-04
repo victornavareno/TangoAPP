@@ -10,7 +10,7 @@ function UserSelection() {
         <img
           src="/logo_tango.png"
           alt="Tango logo"
-          className="h-20 cursor-pointer"
+          className="h-16 cursor-pointer"
           onClick={() => navigate("/")}
         />
       </header>
