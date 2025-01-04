@@ -1,6 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 function Home() {
+  const navigate = useNavigate();
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-purple-900 text-white flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-800 to-purple-800 text-white flex flex-col items-center">
       {/* Header */}
       <header className="w-full max-w-7xl flex justify-between items-center p-6">
         <div className="flex items-center space-x-3">
@@ -28,7 +32,7 @@ function Home() {
             </button>
             <button
               className="px-12 py-4 bg-gradient-to-r from-[#ec008c] to-[#882eff] text-white text-xl font-bold rounded-lg shadow-lg transition-all duration-500 transform hover:scale-105 hover:text-xl will-change-transform"
-              onClick={() => (window.location.href = "/userSelection")}
+              onClick={() => navigate("/userSelection")}
             >
               Prueba Tango!
             </button>
@@ -51,7 +55,7 @@ function Home() {
 
       {/* New Section */}
       <section className="bg-slate-900 mt-60 w-full py-20 bg-gray-90t0 flex flex-col items-center px-6">
-        <div className=" max-w-3xl text-center">
+        <div className="max-w-3xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-purple-500">Tango!</span> busca revolucionar
             la forma en la que las personas conectan.
