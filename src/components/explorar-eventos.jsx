@@ -73,15 +73,15 @@ function ExplorarEventos() {
             <div className="relative h-48 bg-gray-800 flex items-center justify-center">
               <span className="absolute top-4 right-4 bg-purple-700 text-white px-3 py-1 text-sm rounded-full">
                 {event.id_event % 3 === 0
-                  ? "Party"
+                  ? "Fiesta"
                   : event.id_event % 3 === 1
                   ? "Social"
-                  : "Entertainment"}
+                  : "Entretenimiento"}
               </span>
               <img
-                src="/placeholder.svg?height=200&width=400"
+                src="/event.png"
                 alt={event.name}
-                className="h-full w-full object-cover opacity-50"
+                className="h-full w-full object-cover"
               />
             </div>
 
