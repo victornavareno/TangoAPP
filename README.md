@@ -2,14 +2,20 @@
 
 ![image](https://github.com/user-attachments/assets/f0ae4682-06ce-4c99-9305-896604adf153)
 
+# Tango! 🎉
+Tango is a web app designed to help people connect, discover local events, and enjoy unique group experiences. Whether you’re looking to make new friends or participate in activities around your city, Tango makes it simple and fun!
 
-# React + Vite
+## Key Features
+**Find Friends: Discover and connect with like-minded people in your city.**
+Join Events: Explore unique events hosted by local businesses and join in on the fun.
+Support Local: Participate in experiences organized by businesses looking to fill their quieter times, like a cozy Tuesday evening.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How It Works
+**Browse Local Events: View a curated list of activities happening near you, all tailored to your interests.**
+Connect with People: Join events and connect with others who share your passions.
+Support Local Businesses: Enjoy unique experiences while helping local businesses thrive.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-
+##  About the App
+The frontend is built with a modern and interactive user interface to ensure an enjoyable and intuitive experience using **React + Vite, with Tailwind CSS**.
+The backend API handles the app’s data, including user profiles, events, and recommendations.
+With a seamless integration of the frontend and backend, Tango provides a smooth and engaging platform for creating connections and memories.
