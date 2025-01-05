@@ -1,6 +1,6 @@
 # Preview:
 
-![image](https://github.com/user-attachments/assets/28e911b1-27a0-4dba-9cc6-f2d288243132)
+![image](https://github.com/user-attachments/assets/f0ae4682-06ce-4c99-9305-896604adf153)
 
 
 # React + Vite
