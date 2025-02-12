@@ -32,7 +32,7 @@ function Home() {
             <span className="font-bold">experiencias</span> únicas en grupo
           </p>
           <div className="flex justify-center md:justify-start space-x-4">
-            <button className="px-12 py-4 bg-gray-600 text-white text-xl rounded-lg shadow-lg transition-all duration-500 transform hover:scale-105 hover:text-xl will-change-transform">
+            <button className="px-12 py-4 bg-white/10 text-white text-xl rounded-lg shadow-lg transition-all duration-500 transform hover:scale-105 hover:text-xl will-change-transform">
               Saber más
             </button>
             <button

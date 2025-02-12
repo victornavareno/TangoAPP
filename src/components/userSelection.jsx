@@ -27,8 +27,8 @@ function UserSelection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto">
           {/* Local/Host Option */}
           <div
-            onClick={() => navigate("/crear-evento")}
-            className="group bg-gradient-to-r from-gray-500 to-gray-600 rounded-xl p-10 flex flex-col items-center justify-between hover:scale-105 transition-transform cursor-pointer shadow-lg"
+            onClick={() => navigate("/register", { state: { role: "host" } })} // PASO EL ROL COMO STATE para REGISTER
+            className="group bg-white/10 rounded-xl p-10 flex flex-col items-center justify-between hover:scale-105 transition-transform cursor-pointer shadow-lg"
           >
             <div>
               <h2 className="text-5xl font-bold text-white mb-6">
