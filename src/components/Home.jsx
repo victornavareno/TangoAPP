@@ -45,7 +45,7 @@ function Home() {
         </div>
 
         {/* Right Column */}
-        <div className="relative">
+        <div className="relative -ml-8">
           <div className="absolute -inset-1 bg-gradient-to-r from-[#ec008c] to-[#882eff] opacity-30 blur-2xl rounded-[32px]" />
           <img
             src="/friends2.png"
