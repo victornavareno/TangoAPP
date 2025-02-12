@@ -1,6 +1,7 @@
 # Preview:
 
-![image](https://github.com/user-attachments/assets/f0ae4682-06ce-4c99-9305-896604adf153)
+![image](https://github.com/user-attachments/assets/f34b5972-33b8-4f8e-813f-9ed9d3db2edf)
+
 
 # Tango! 🎉
 Tango is a web app designed to help people connect, discover local events, and enjoy unique group experiences. Whether you’re looking to make new friends or participate in activities around your city, Tango makes it simple and fun!
