@@ -1,7 +1,8 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Header from "../components/Header";
 
-function Register() {
+function RegisterPage() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -42,6 +43,7 @@ function Register() {
     };
 
     try {
+      // Register the user
       const response = await fetch("http://localhost:5000/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -51,7 +53,35 @@ function Register() {
       const data = await response.json();
       if (response.ok) {
         console.log("User registered:", data);
-        navigate("/hostDashboard");
+
+        // Automatically log in after successful registration
+        const loginResponse = await fetch("http://localhost:5000/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: form.email,
+            password: form.password,
+          }),
+        });
+
+        const loginData = await loginResponse.json();
+        if (loginResponse.ok) {
+          // Store the token and role in localStorage
+          localStorage.setItem("token", loginData.token);
+          localStorage.setItem("role", loginData.role);
+          console.log("User logged in:", loginData);
+
+          // Navigate to the correct dashboard based on role
+          if (loginData.role === "host") {
+            navigate("/hostDashboard");
+          } else {
+            navigate("/subscriberDashboard");
+          }
+        } else {
+          alert(
+            "Login failed after registration. Please try logging in manually."
+          );
+        }
       } else {
         alert(data.error);
       }
@@ -64,18 +94,7 @@ function Register() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#1a1533] via-[#2d1b4e] to-[#1a1533] text-white flex flex-col items-center justify-center">
       {/* Header */}
-      <header
-        className="absolute top-6 left-6 cursor-pointer"
-        onClick={() => navigate("/")}
-      >
-        <img
-          src="/logo_tango.png"
-          alt="Tango logo"
-          className="h-16 px-6"
-          onClick={() => navigate("/")}
-        />
-      </header>
-
+      <Header />
       {/* Main Content */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-12 p-8 w-full max-w-4xl">
         {/* Form Section */}
@@ -198,4 +217,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default RegisterPage;

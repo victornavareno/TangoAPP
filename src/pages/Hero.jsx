@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-function Home() {
+function Hero() {
   const navigate = useNavigate();
 
   return (
@@ -58,4 +58,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Hero;

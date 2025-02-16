@@ -1,18 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import UserSelection from "./components/userSelection";
-import Register from "./components/register";
-import ExplorarEventos from "./components/explorar-eventos";
-import HostDashboard from "./components/HostDashboard";
+import Hero from "./pages/Hero";
+import UserSelection from "./pages/UserSelection";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
+import EventsExplorer from "./pages/EventsExplorer";
+import HostDashboard from "./pages/HostDashboard";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Hero />} />
         <Route path="/userSelection" element={<UserSelection />} />
-        <Route path="/explorar-eventos" element={<ExplorarEventos />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/explorar-eventos" element={<EventsExplorer />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/hostDashboard" element={<HostDashboard />} />
       </Routes>
     </Router>

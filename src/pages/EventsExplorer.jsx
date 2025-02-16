@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import { Calendar, Clock, MapPin, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
 
-function ExplorarEventos() {
+function EventsExplorer() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -14,7 +15,7 @@ function ExplorarEventos() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch("http://localhost:5000/events"); // Replace with your API URL
+        const response = await fetch("http://localhost:5001/events"); // Replace with your API URL
         if (!response.ok) {
           throw new Error("Failed to fetch events.");
         }
@@ -49,21 +50,10 @@ function ExplorarEventos() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0a0a1a] via-[#1a1a3a] to-[#2a1a4a] text-white">
       {/* Header */}
-      <header className="text-center py-10">
-        <img
-          src="/logo_tango.png"
-          alt="Tango logo"
-          className="px-14 h-14 cursor-pointer"
-          onClick={() => navigate("/")}
-        />
-        <h1 className="text-5xl font-extrabold mb-2">Eventos en tu ciudad</h1>
-        <p className="text-gray-400 text-xl">
-          Descubre experiencias increíbles cerca de ti
-        </p>
-      </header>
+      <Header />
 
       {/* Event Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-12 lg:px-24">
+      <div className="py-36 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-12 lg:px-24">
         {events.map((event) => (
           <div
             key={event.id_event}
@@ -131,4 +121,4 @@ function ExplorarEventos() {
   );
 }
 
-export default ExplorarEventos;
+export default EventsExplorer;

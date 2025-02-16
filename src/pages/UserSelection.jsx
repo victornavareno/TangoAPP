@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Header from "../components/Header"; // Import the new Header component
 
 function UserSelection() {
   const navigate = useNavigate();
@@ -6,14 +7,7 @@ function UserSelection() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#0a0a1a] via-[#1a1a3a] to-[#2a1a4a] text-white relative">
       {/* Header with Logo */}
-      <header className="absolute top-10 left-20">
-        <img
-          src="/logo_tango.png"
-          alt="Tango logo"
-          className="h-16 cursor-pointer"
-          onClick={() => navigate("/")}
-        />
-      </header>
+      <Header />
       {/* Main Content */}
       <div className="text-center px-6">
         <h1 className="text-5xl font-extrabold text-white mb-1 leading-tight">
