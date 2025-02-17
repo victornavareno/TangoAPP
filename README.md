@@ -18,6 +18,10 @@ Support Local: Participate in experiences organized by businesses looking to fil
 
 ##  About the App
 The frontend is built with a modern user interface using **React + Vite, with Tailwind CSS**.
-The backend API handles the app’s data, including user profiles, events, and recommendations.
+The backend APIs (Using Python - Flask) handle the app’s data:
+- Users (Creation, authentication using JWT...)
+- Events
+
 ---
+
 ### Author: Victor Navareño
