@@ -4,7 +4,7 @@
 
 
 # Tango! 🎉
-Tango is a web app designed to help people connect, discover local events, and enjoy unique group experiences. Whether you’re looking to make new friends or participate in activities around your city, Tango makes it simple and fun!
+A web app designed to help people connect, discover local events, and enjoy unique group experiences!
 
 ## Key Features
 **Find Friends: Discover and connect with like-minded people in your city.**
@@ -13,10 +13,11 @@ Support Local: Participate in experiences organized by businesses looking to fil
 
 ## How It Works
 **Browse Local Events: View a curated list of activities happening near you, all tailored to your interests.**
-Connect with People: Join events and connect with others who share your passions.
-Support Local Businesses: Enjoy unique experiences while helping local businesses thrive.
+- Connect with People: Join events and connect with others who share your passions.
+- Support Local Businesses: Enjoy unique experiences while helping local businesses thrive.
 
 ##  About the App
-The frontend is built with a modern and interactive user interface to ensure an enjoyable and intuitive experience using **React + Vite, with Tailwind CSS**.
+The frontend is built with a modern user interface using **React + Vite, with Tailwind CSS**.
 The backend API handles the app’s data, including user profiles, events, and recommendations.
-With a seamless integration of the frontend and backend, Tango provides a smooth and engaging platform for creating connections and memories.
+---
+### Author: Victor Navareño
