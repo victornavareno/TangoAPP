@@ -3,8 +3,8 @@
 ![image](https://github.com/user-attachments/assets/f34b5972-33b8-4f8e-813f-9ed9d3db2edf)
 
 
-# Tango! 🎉
-A web app designed to help people connect, discover local events, and enjoy unique group experiences!
+# Tango! 
+## A web app designed to help people connect
 
 ## Key Features
 **Find Friends: Discover and connect with like-minded people in your city.**
