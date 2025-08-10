@@ -35,10 +35,11 @@ function LoginPage() {
 
         // Redirect based on role
           // For now there are 2 roles, Event Creator "host" and Event Assistant (may call it "user")
+          // A new "admin" role may be added for monitoring purposes
         if (data.role === "host") {
           navigate("/hostDashboard");
         } else {
-          navigate("/subscriberDashboard"); // Adjust this as needed
+          navigate("/subscriberDashboard"); // Adjust this screen
         }
       } else {
         setError(data.error);
