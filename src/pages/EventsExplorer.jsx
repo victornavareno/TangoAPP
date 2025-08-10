@@ -12,6 +12,7 @@ function EventsExplorer() {
   const navigate = useNavigate();
 
   // Fetch events from the API
+    // TODO MOCK DATA / REWRITE API IN SPRING BOOT
   useEffect(() => {
     const fetchEvents = async () => {
       try {

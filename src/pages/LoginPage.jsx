@@ -16,7 +16,6 @@ function LoginPage() {
     }));
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -35,6 +34,7 @@ function LoginPage() {
         console.log("User logged in:", data);
 
         // Redirect based on role
+          // For now there are 2 roles, Event Creator "host" and Event Assistant (may call it "user")
         if (data.role === "host") {
           navigate("/hostDashboard");
         } else {

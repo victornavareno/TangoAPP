@@ -67,6 +67,7 @@ function RegisterPage() {
         const loginData = await loginResponse.json();
         if (loginResponse.ok) {
           // Store the token and role in localStorage
+            //TODO refactor to make this safe - add Auth0
           localStorage.setItem("token", loginData.token);
           localStorage.setItem("role", loginData.role);
           console.log("User logged in:", loginData);
