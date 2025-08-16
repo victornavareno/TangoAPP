@@ -5,12 +5,13 @@ import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import EventsExplorer from "./pages/EventsExplorer";
 import HostDashboard from "./pages/HostDashboard";
+import HeroKeda from "./pages/HeroKeda.jsx";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<HeroKeda />} />
         <Route path="/userSelection" element={<UserSelection />} />
         <Route path="/explorar-eventos" element={<EventsExplorer />} />
         <Route path="/register" element={<RegisterPage />} />
