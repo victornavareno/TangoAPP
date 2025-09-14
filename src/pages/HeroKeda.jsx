@@ -18,7 +18,7 @@ function Hero() {
                 {/* Header */}
                 <header className="container mx-auto px-6 py-8">
                     <div className="flex items-center">
-                        <img src="/logo_keda.png" alt="Tango logo" className="h-24 mt-6 mb-0 py-0" />
+                        <img src="/logo_keda_pink.png" alt="Tango logo" className="h-32 mt-6 mb-0 py-0" />
                     </div>
                 </header>
 
@@ -29,7 +29,7 @@ function Hero() {
                         <h1 className="text-6xl lg:text-7xl font-extrabold tracking-tight leading-none mb-6">
               <span className="inline-block">
                 Encuentra{" "}
-                  <span className="bg-gradient-to-r from-[#B0FE4A] to-[#4afe68] bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#e32eff] to-[#ec008c] bg-clip-text text-transparent">
                   amigos
                 </span>
               </span>
@@ -46,7 +46,7 @@ function Hero() {
                                 Saber más
                             </button>
                             <button
-                                className="px-12 py-4 bg-gradient-to-r from-[#B0FE4A] to-[#4afe68] text-black text-xl font-bold rounded-lg shadow-lg transition-all duration-500 transform hover:scale-105 hover:text-xl will-change-transform"
+                                className="px-12 py-4 bg-gradient-to-r from-[#ec008c] to-[#882eff] text-white text-xl font-bold rounded-lg shadow-lg transition-all duration-500 transform hover:scale-105 hover:text-xl will-change-transform"
                                 onClick={() => navigate("/userSelection")}
                             >
                                 Prueba Keda!
@@ -56,7 +56,7 @@ function Hero() {
 
                     {/* Right Column */}
                     <div className="relative -ml-8">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-[#B0FE4A] to-[#B0FE4A] opacity-30 blur-2xl rounded-[32px]" />
+                        <div className="absolute -inset-1 bg-gradient-to-r from-[#ec008c] to-[#882eff] opacity-30 blur-2xl rounded-[32px]" />
                         <img
                             src="/friends_bar.png"
                             alt="Friends enjoying time together"
