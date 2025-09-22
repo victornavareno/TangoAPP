@@ -128,14 +128,25 @@ function EventsExplorer() {
     // Función para formatear la fecha a un formato legible en español
     const formatDate = (dateString) => {
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(dateString).toLocaleDate-String('es-ES', options);
+        return new Date(dateString).toLocaleDateString('es-ES', options);
+    };
+
+    // Función para obtener una imagen aleatoria
+    const getRandomEventImage = () => {
+        const imageNumber = Math.floor(Math.random() * 6) + 1; // Del 1 al 6
+        return `/event${imageNumber}.png`;
     };
 
     useEffect(() => {
         // Simula la llamada a la API con los datos mockeados
         const fetchMockEvents = () => {
             try {
-                setEvents(mockedEvents);
+                // Asigna una imagen aleatoria a cada evento al cargar
+                const eventsWithRandomImages = mockedEvents.map(event => ({
+                    ...event,
+                    imageUrl: getRandomEventImage() // Añade una nueva propiedad para la URL de la imagen
+                }));
+                setEvents(eventsWithRandomImages);
             } catch (err) {
                 setError("Error al cargar los datos mockeados.");
             } finally {
@@ -179,15 +190,16 @@ function EventsExplorer() {
                     >
                         {/* Event Header */}
                         <div className="relative h-48 bg-gray-800 flex items-center justify-center">
-              <span className="absolute top-4 right-4 bg-purple-700 text-white px-3 py-1 text-sm rounded-full">
-                {event.id_event % 3 === 0
-                    ? "Fiesta"
-                    : event.id_event % 3 === 1
-                        ? "Social"
-                        : "Entretenimiento"}
-              </span>
+                            <span className="absolute top-4 right-4 bg-purple-700 text-white px-3 py-1 text-sm rounded-full">
+                                {event.id_event % 3 === 0
+                                    ? "Fiesta"
+                                    : event.id_event % 3 === 1
+                                        ? "Social"
+                                        : "Entretenimiento"}
+                            </span>
+                            {/* Usa la imagen aleatoria asignada */}
                             <img
-                                src="/event.png"
+                                src={event.imageUrl}
                                 alt={event.name}
                                 className="h-full w-full object-cover"
                             />
@@ -215,8 +227,8 @@ function EventsExplorer() {
                                 <div className="flex items-center gap-2">
                                     <Users className="h-4 w-4" />
                                     <span>
-                    {event.subscribers.length}/{event.max_capacity} asistentes
-                  </span>
+                                        {event.subscribers.length}/{event.max_capacity} asistentes
+                                    </span>
                                 </div>
                             </div>
                         </div>
