@@ -10,7 +10,7 @@ const Header = () => {
       <img
         src="/logo_keda_pink.png"
         alt="Tango logo"
-        className="h-32 cursor-pointer"
+        className="h-24 cursor-pointer"
         onClick={() => navigate("/")}
       />
 
