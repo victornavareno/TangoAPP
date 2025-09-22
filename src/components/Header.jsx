@@ -8,9 +8,9 @@ const Header = () => {
     <header className="fixed top-8 left-20 w-full flex items-center justify-between px-10 py-4 bg-transparent z-50">
       {/* Logo */}
       <img
-        src="/logo_tango.png"
+        src="/logo_keda_pink.png"
         alt="Tango logo"
-        className="h-16 cursor-pointer"
+        className="h-32 cursor-pointer"
         onClick={() => navigate("/")}
       />
 
