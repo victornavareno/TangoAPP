@@ -137,16 +137,24 @@ function EventsExplorer() {
         return `/event${imageNumber}.png`;
     };
 
+    // Función para obtener un color aleatorio entre pink-500 y purple-600
+    const getRandomCategoryColor = () => {
+        const colors = ['bg-pink-500', 'bg-purple-600'];
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        return colors[randomIndex];
+    };
+
     useEffect(() => {
         // Simula la llamada a la API con los datos mockeados
         const fetchMockEvents = () => {
             try {
-                // Asigna una imagen aleatoria a cada evento al cargar
-                const eventsWithRandomImages = mockedEvents.map(event => ({
+                // Asigna una imagen aleatoria y un color de categoría a cada evento al cargar
+                const eventsWithRandomProps = mockedEvents.map(event => ({
                     ...event,
-                    imageUrl: getRandomEventImage() // Añade una nueva propiedad para la URL de la imagen
+                    imageUrl: getRandomEventImage(),
+                    categoryColor: getRandomCategoryColor() // Nueva propiedad para el color de la categoría
                 }));
-                setEvents(eventsWithRandomImages);
+                setEvents(eventsWithRandomProps);
             } catch (err) {
                 setError("Error al cargar los datos mockeados.");
             } finally {
@@ -190,14 +198,13 @@ function EventsExplorer() {
                     >
                         {/* Event Header */}
                         <div className="relative h-48 bg-gray-800 flex items-center justify-center">
-                            <span className="absolute top-4 right-4 bg-purple-700 text-white px-3 py-1 text-sm rounded-full">
+                            <span className={`absolute top-4 right-4 ${event.categoryColor} text-white px-3 py-1 text-sm rounded-full`}>
                                 {event.id_event % 3 === 0
                                     ? "Fiesta"
                                     : event.id_event % 3 === 1
                                         ? "Social"
                                         : "Entretenimiento"}
                             </span>
-                            {/* Usa la imagen aleatoria asignada */}
                             <img
                                 src={event.imageUrl}
                                 alt={event.name}
