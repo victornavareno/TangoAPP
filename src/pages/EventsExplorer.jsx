@@ -125,19 +125,16 @@ function EventsExplorer() {
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
-    // Función para formatear la fecha a un formato legible en español
     const formatDate = (dateString) => {
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         return new Date(dateString).toLocaleDateString('es-ES', options);
     };
 
-    // Función para obtener una imagen aleatoria
     const getRandomEventImage = () => {
         const imageNumber = Math.floor(Math.random() * 6) + 1; // Del 1 al 6
         return `/event${imageNumber}.png`;
     };
 
-    // Función para obtener un color aleatorio entre pink-500 y purple-600
     const getRandomCategoryColor = () => {
         const colors = ['bg-pink-500', 'bg-purple-600'];
         const randomIndex = Math.floor(Math.random() * colors.length);
@@ -145,10 +142,10 @@ function EventsExplorer() {
     };
 
     useEffect(() => {
-        // Simula la llamada a la API con los datos mockeados
+        // API called (mocked)
         const fetchMockEvents = () => {
             try {
-                // Asigna una imagen aleatoria y un color de categoría a cada evento al cargar
+                // random img is assigned to event
                 const eventsWithRandomProps = mockedEvents.map(event => ({
                     ...event,
                     imageUrl: getRandomEventImage(),
@@ -158,7 +155,6 @@ function EventsExplorer() {
             } catch (err) {
                 setError("Error al cargar los datos mockeados.");
             } finally {
-                // Simula un pequeño retraso de carga como si fuera una API real
                 setTimeout(() => {
                     setLoading(false);
                 }, 500);
@@ -194,6 +190,7 @@ function EventsExplorer() {
                 {events.map((event) => (
                     <div
                         key={event.id_event}
+                        onClick={() => navigate(`/event/${event.id_event}`)}
                         className="cursor-pointer bg-gradient-to-b from-[#1A1A2E] to-[#2A2A3E] rounded-lg shadow-md overflow-hidden hover:scale-105 transition-transform"
                     >
                         {/* Event Header */}
