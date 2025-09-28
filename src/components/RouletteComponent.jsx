@@ -77,16 +77,33 @@ const RouletteComponent = ({ isOpen, onClose, onJoinSuccess }) => {
                         {prizeResult.name.toLowerCase().includes('sin premio') ? (
                             <>
                                 <h2 className="text-4xl font-bold text-gray-400 mb-4">¡Otra vez será!</h2>
-                                <p className="text-gray-300 text-lg mb-8">No te preocupes, ¡lo importante es participar y disfrutar del evento!</p>
+                                <p className="text-gray-300 text-lg mb-8">
+                                    No te preocupes, ¡lo importante es participar y disfrutar del evento!
+                                </p>
                             </>
                         ) : (
                             <>
-                                <h2 className="text-2xl font-bold bg-gradient-to-r from-[#e32eff] to-[#ec008c] bg-clip-text text-transparent mb-2">¡ENHORABUENA!</h2>
+                                <h2 className="text-2xl font-bold bg-gradient-to-r from-[#e32eff] to-[#ec008c] bg-clip-text text-transparent mb-2">
+                                    ¡ENHORABUENA!
+                                </h2>
                                 <p className="text-white text-lg mb-4">Has ganado:</p>
                                 <div className="my-6 p-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg inline-block">
-                                    <p className="text-4xl font-extrabold bg-[#1a1a2e] px-6 py-3 rounded-md">{prizeResult.name}</p>
+                                    <p className="text-4xl font-extrabold bg-[#1a1a2e] px-6 py-3 rounded-md">
+                                        {prizeResult.name}
+                                    </p>
                                 </div>
-                                <p className="text-gray-400 text-sm mt-4">Muestra esta pantalla en el local para canjear tu premio.</p>
+                                <p className="text-gray-400 text-sm mt-4">
+                                    Muestra esta pantalla en el local para canjear tu premio.
+                                </p>
+
+                                {/* --- QR Mockup  --- */}
+                                <div className="mt-6 flex justify-center">
+                                    <img
+                                        src="/qr_mockup.png"  // <-- tu QR aquí
+                                        alt="QR para canjear premio"
+                                        className="w-40 h-40 rounded-lg shadow-lg border border-white/10"
+                                    />
+                                </div>
                             </>
                         )}
                         <button onClick={handleCloseAndNotify} className="mt-8 w-full px-8 py-3 bg-gradient-to-r from-[#ec008c] to-[#882eff] text-white font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105">
