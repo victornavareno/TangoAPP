@@ -98,18 +98,13 @@ const RouletteComponent = ({ isOpen, onClose, onJoinSuccess }) => {
                         <h2 className="text-3xl lg:text-4xl font-bold mb-2">¡Confirma y Gana!</h2>
                         <p className="text-gray-300 mb-8">Gira la ruleta al unirte y consigue un premio.</p>
                         <div className="mb-8 relative flex items-center justify-center">
-                            {/* --- MEJORA: Puntero estilizado --- */}
-                            <div className="absolute -top-1 z-10 w-10 h-10 flex items-start justify-center" style={{ left: 'calc(50% - 20px)'}}>
-                                <div className="w-0 h-0 border-l-[12px] border-l-transparent border-t-[20px] border-t-white border-r-[12px] border-r-transparent drop-shadow-lg"></div>
-                            </div>
                             <Wheel
                                 mustStartSpinning={mustSpin}
                                 prizeNumber={prizeNumber}
                                 data={prizeData}
                                 onStopSpinning={handleStopSpinning}
-                                // FASTER ANIMATION
-                                spinDuration={0.8}
-                                disableInitialAnimation={true}
+                                spinDuration={0.2}
+                                disableInitialAnimation={false}
                                 perpendicularText={true}
                                 fontSize={16}
                                 fontWeight={600}
@@ -119,10 +114,29 @@ const RouletteComponent = ({ isOpen, onClose, onJoinSuccess }) => {
                                 textColors={['#ffffff']}
                                 outerBorderColor={'#ffffff20'}
                                 innerBorderColor={'#ffffff20'}
-                                innerRadius={10}
+                                innerRadius={40}
                                 innerBorderWidth={15}
                                 radiusLineColor={'#ffffff20'}
+                                pointerProps={{
+                                    style: { filter: "brightness(10)" } // pointer blanco
+                                }}
                             />
+
+                            {/*  LOGO CENTER ROULETTE  */}
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <div className="w-28 h-28 rounded-full bg-white flex items-center justify-center shadow-xl border-4 border-purple-400">
+                                    <img
+                                        src="/logo_keda_pink.png"
+                                        alt="Logo_KEDA"
+                                        className="w-20 h-20 object-contain"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* ANIMATED EXTERIOR CIRCLE */}
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <div className="w-[112%] h-[112%] rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 blur-xl opacity-70 animate-pulse"></div>
+                            </div>
                         </div>
                         <button onClick={handleSpinClick} disabled={mustSpin} className="w-full px-12 py-4 bg-gradient-to-r from-[#ec008c] to-[#882eff] text-white text-xl font-bold rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
                             {mustSpin ? 'Girando...' : 'Girar y Unirme'}

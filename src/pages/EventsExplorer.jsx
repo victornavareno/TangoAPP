@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { Calendar, Clock, MapPin, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
+import RouletteComponent  from "../components/RouletteComponent";
 
-// --- DATOS MOCKEADOS ---
 const mockedEvents = [
     {
         id_event: 1,
@@ -123,6 +123,15 @@ function EventsExplorer() {
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    const [isRouletteOpen, setRouletteOpen] = useState(false);
+
+    const handleJoinClick = (e) => {
+        e.stopPropagation();
+        setRouletteOpen(true);
+    };
+
+
     const navigate = useNavigate();
 
     const formatDate = (dateString) => {
@@ -239,18 +248,26 @@ function EventsExplorer() {
 
                         {/* Join Button */}
                         <div className="px-6 pb-6">
-                            <button className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity">
-                                Unirse al evento
+                            <button
+                                onClick={handleJoinClick}
+                                className="w-full mt-4 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-bold text-lg hover:opacity-90 transition-opacity">
+                                ¡Unirse al Evento!
                             </button>
                         </div>
                     </div>
                 ))}
             </div>
 
+
             {/* Footer */}
             <footer className="text-center py-6 text-gray-400 text-sm">
                 © 2025 Keda. Todos los derechos reservados.
             </footer>
+
+            <RouletteComponent
+                isOpen={isRouletteOpen}
+                onClose={() => setRouletteOpen(false)}
+            />
         </div>
     );
 }
