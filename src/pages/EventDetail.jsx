@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Calendar, Clock, MapPin, Users, ArrowLeft, User } from "lucide-react";
 import Header from "../components/Header";
+import RouletteComponent  from "../components/RouletteComponent";
 
 // MOCKED DATA
 const mockedEvents = [
@@ -144,8 +145,11 @@ function EventDetail() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const [isRouletteOpen, setRouletteOpen] = useState(false);
+
     const { id } = useParams();
     const navigate = useNavigate();
+
 
     useEffect(() => {
         const findEvent = () => {
@@ -203,7 +207,6 @@ function EventDetail() {
                     <div className="lg:col-span-2">
                         <h2 className="text-3xl font-bold mb-4 border-b-2 border-purple-500 pb-2">Sobre el evento</h2>
                         <p className="text-gray-300 text-lg leading-relaxed">{event.description}</p>
-
                         <h3 className="text-2xl font-bold mt-8 mb-4">Organizador</h3>
                         <div className="flex items-center gap-3 bg-white/5 p-4 rounded-lg">
                             <User className="text-pink-500" />
@@ -230,7 +233,9 @@ function EventDetail() {
                                 <span>{event.subscribers.length} / {event.max_capacity} asistentes</span>
                             </div>
 
-                            <button className="w-full mt-4 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-bold text-lg hover:opacity-90 transition-opacity">
+                            <button
+                                onClick={() => setRouletteOpen(true)}
+                                className="w-full mt-4 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-bold text-lg hover:opacity-90 transition-opacity">
                                 ¡Unirse al Evento!
                             </button>
                         </div>
@@ -247,6 +252,11 @@ function EventDetail() {
                     </div>
                 </div>
             </main>
+
+            <RouletteComponent
+                isOpen={isRouletteOpen}
+                onClose={() => setRouletteOpen(false)}
+            />
         </div>
     );
 }
