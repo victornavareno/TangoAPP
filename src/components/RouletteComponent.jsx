@@ -112,9 +112,20 @@ const RouletteComponent = ({ isOpen, onClose, onJoinSuccess }) => {
                     </div>
                 ) : (
                     <div className="z-10 relative">
+
                         <h2 className="text-3xl lg:text-4xl font-bold mb-2">¡Confirma y Gana!</h2>
                         <p className="text-gray-300 mb-8">Gira la ruleta al unirte y consigue un premio.</p>
                         <div className="mb-8 relative flex items-center justify-center">
+                            {/*  LOGO CENTER ROULETTE  */}
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <div className="w-28 h-28 rounded-full bg-white flex items-center justify-center shadow-xl border-4 border-purple-400">
+                                    <img
+                                        src="/logo_keda_positive.png"
+                                        alt="Logo_KEDA"
+                                        className="w-22 h-22 object-contain"
+                                    />
+                                </div>
+                            </div>
                             <Wheel
                                 mustStartSpinning={mustSpin}
                                 prizeNumber={prizeNumber}
@@ -139,16 +150,7 @@ const RouletteComponent = ({ isOpen, onClose, onJoinSuccess }) => {
                                 }}
                             />
 
-                            {/*  LOGO CENTER ROULETTE  */}
-                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div className="w-28 h-28 rounded-full bg-white flex items-center justify-center shadow-xl border-4 border-purple-400">
-                                    <img
-                                        src="/logo_keda_pink.png"
-                                        alt="Logo_KEDA"
-                                        className="w-20 h-20 object-contain"
-                                    />
-                                </div>
-                            </div>
+
 
                             {/* ANIMATED EXTERIOR CIRCLE */}
                             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
