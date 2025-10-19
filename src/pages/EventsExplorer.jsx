@@ -123,6 +123,7 @@ function EventsExplorer() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const navigate = useNavigate();
     const [isRouletteOpen, setRouletteOpen] = useState(false);
 
     const handleJoinClick = (e) => {
@@ -130,8 +131,10 @@ function EventsExplorer() {
         setRouletteOpen(true);
     };
 
-
-    const navigate = useNavigate();
+    const handleRouletteFinish = () => {
+        setRouletteOpen(false); // Cierra la ruleta
+        navigate('/subscriberDashboard'); // Redirige al usuario
+    };
 
     const formatDate = (dateString) => {
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -275,6 +278,7 @@ function EventsExplorer() {
             <RouletteComponent
                 isOpen={isRouletteOpen}
                 onClose={() => setRouletteOpen(false)}
+                onSpinFinish={handleRouletteFinish}
             />
         </div>
     );
