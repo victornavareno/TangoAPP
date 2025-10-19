@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { Calendar, Clock, MapPin, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import Header from "../components/Header";
 import RouletteComponent  from "../components/RouletteComponent";
 
 const mockedEvents = [
@@ -191,16 +190,25 @@ function EventsExplorer() {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-[#0a0a1a] via-[#1a1a3a] to-[#2a1a4a] text-white">
-            {/* Header */}
-            <Header />
+            {/* Header (Not Sticky) */}
+            <header className="w-full flex items-center justify-between px-6 md:px-12 lg:px-24 py-6">
+                {/* Logo */}
+                <img
+                    src="/logo_keda_pink.png"
+                    alt="Keda logo"
+                    className="h-24 cursor-pointer"
+                    onClick={() => navigate("/")}
+                />
+                {/* Aquí podrías añadir botones si los necesitas, como "Mi Perfil" */}
+            </header>
 
             {/* Event Cards */}
-            <div className="py-36 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-12 lg:px-24">
+            <main className="pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12 lg:px-24">
                 {events.map((event) => (
                     <div
                         key={event.id_event}
                         onClick={() => navigate(`/event/${event.id_event}`)}
-                        className="cursor-pointer bg-gradient-to-b from-[#1A1A2E] to-[#2A2A3E] rounded-lg shadow-md overflow-hidden hover:scale-105 transition-transform"
+                        className="cursor-pointer bg-gradient-to-b from-[#1A1A2E] to-[#2A2A3E] rounded-lg shadow-md overflow-hidden hover:scale-105 transition-all duration-300"
                     >
                         {/* Event Header */}
                         <div className="relative h-48 bg-gray-800 flex items-center justify-center">
@@ -256,7 +264,7 @@ function EventsExplorer() {
                         </div>
                     </div>
                 ))}
-            </div>
+            </main>
 
 
             {/* Footer */}
