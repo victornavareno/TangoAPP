@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import EventsExplorer from "./pages/EventsExplorer";
 import HostDashboard from "./pages/HostDashboard";
 import HeroKeda from "./pages/HeroKeda.jsx";
+import CreateEventPage from "./pages/CreateEventPage.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
           <Route path="/hostDashboard" element={<HostDashboard />} />
           <Route path="/event/:id" element={<EventDetail />} />
+          <Route path="/crearEvento" element={<CreateEventPage />} />
 
       </Routes>
     </Router>
