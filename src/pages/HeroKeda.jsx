@@ -66,14 +66,12 @@ function Hero() {
     const [showHowItWorks, setShowHowItWorks] = useState(false);
     const howItWorksRef = useRef(null);
 
-    useEffect(() => {
-        if (showHowItWorks && howItWorksRef.current) {
-            howItWorksRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }, [showHowItWorks]);
-
     const handleLearnMoreClick = () => {
         setShowHowItWorks(true);
+        // setTimeout -> componente HowItWirks has been rendered before smooth scroll
+        setTimeout(() => {
+            howItWorksRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 0);
     };
 
     return (
