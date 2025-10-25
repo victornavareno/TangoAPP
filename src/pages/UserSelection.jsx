@@ -57,7 +57,7 @@ function UserSelection() {
       </div>
       {/* Decorative Footer */}
       <footer className="absolute bottom-10 text-center text-gray-400 text-base">
-        © 2025 Tango. Todos los derechos reservados.
+        © 2025 Keda! Todos los derechos reservados.
       </footer>
     </div>
   );
