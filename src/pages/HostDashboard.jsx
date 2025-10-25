@@ -57,6 +57,7 @@ function HostDashboard() {
     const navigate = useNavigate();
     const [hostData, setHostData] = useState(mockHostData);
 
+    // backend api call (now its mocked)
     // useEffect(() => {
     //   fetchHostData().then(data => setHostData(data));
     // }, []);
