@@ -105,8 +105,8 @@ const TierCard = ({ tier }) => (
 function TierSelector() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-[#0a0a1a] via-[#1a1a3a] to-[#2a1a4a] text-white">
-            <Header />
-            <div className="container mx-auto px-6 py-24">
+            <Header /> 
+            <div className="container mx-auto px-6 pt-48 pb-24"> {/* Ajuste de padding superior */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
                         Planes pensados para <span className='bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent'>ti</span>
